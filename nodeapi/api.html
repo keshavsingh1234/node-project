@@ -1,0 +1,32 @@
+<html>
+      <head>
+
+      </head>
+      <body>
+            <script>
+                  
+                  
+                  let options={
+                        method:"POST",
+                        headers:{
+                              "Content-type":"application/json"
+                  
+                        },
+                        body: JSON.stringify({
+                              name: "java",
+                              email: 'singh@gmail.com',
+                              address: "9001",
+                              phone :"9898989898",
+                              class :"1",
+                              fee:290,
+                            }),
+                  }
+                  fetch('http://localhost:8000/insert/users', options)
+                  .then((response) =>response.json())
+                  .then((json) =>console.log(json));
+                  
+                    </script>
+      </body>
+</html>
+            
+   
