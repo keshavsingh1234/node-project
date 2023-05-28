@@ -10,6 +10,7 @@ const alert=require("alert")
 const temp=path.join(__dirname,"../nodeapi/temp/views")
 const nodemailer=require("nodemailer");
 const Sendmail=require("../nodeapi/Sendmail.js")
+const PORT=process.env.PORT || 8000;
 app.use(express.json())
 app.set("view engine","ejs")
 const multer=require("multer");
@@ -419,6 +420,6 @@ app.get("/notify/:id/:days",async(req,res)=>{
 })
 })
 
-app.listen(8000,()=>{
+app.listen(PORT,()=>{
   console.log("running")
 });
